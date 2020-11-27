@@ -19,10 +19,10 @@ League sponsorship web service
     * One for adding a league to the system
     * Another for for finding leagues to sponsor.
 
-### Adding 
+#### Adding 
     * A league should be a collection of name, pair of longitude/latitude, and a single price point to purchase sponsorship.
 
-### Finding
+#### Finding
     * Endpoint for finding leagues, should consist of a latitude/longitude pair around which to focus the search.
     * A radius in miles in which to search around that central point.
     * A total budget to spend on leagues.
