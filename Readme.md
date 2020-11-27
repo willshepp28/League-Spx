@@ -1,9 +1,15 @@
-# League-Spx
+<h1 align="center">Because investing in community matters!!!</h1>
 
-League sponsorship web service
+<p align="center">
+  <img src="https://league-spx-assets.s3.amazonaws.com/logo+(1).png" alt="leagueSpx-logo" width="120px" height="120px"/>
+  <br>
+  <i>LeagueSpx is a platform to enable brands to connect and sports youth sports.</i>
+  <br>
+</p>
 
 
 ## Technologies
+
     * Angular - is a platform for building mobile and desktop web applications. 
     * Boostrap - a framework to help you design websites faster and easier.
     * Express - is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications
@@ -15,6 +21,7 @@ League sponsorship web service
 
 
 ## Requirements
+
     * It should have two endpoints.
     * One for adding a league to the system
     * Another for for finding leagues to sponsor.
