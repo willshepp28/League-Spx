@@ -5,3 +5,47 @@ SEQUELIZE CLI
 - npx sequelize-cli model:generate --name User --attributes 
 - npx sequelize-cli db:migrate
 - npx sequelize-cli seed:generate --name
+
+
+
+LONGITUDE / LATITUDE
+ https://sequelize.org/master/class/lib/data-types.js~GEOMETRY.html
+https://stackoverflow.com/questions/44675630/geospatial-distance-calculator-using-sequelize-mysql
+https://manuel-rauber.com/2016/01/08/using-geo-based-data-with-sequelizejs-utilizing-postgresql-and-ms-sql-server-in-node-js/
+https://medium.com/javascript-in-plain-english/an-introduction-to-geocoding-using-node-js-fe1a5d3aa05c
+
+
+
+CALCULATE RADIUS
+https://www.geodatasource.com/developers/javascript
+
+
+
+
+
+
+
+DATA MODEL 
+
+* LEAGUE
+
+    - name
+    - coordinates
+    - price
+    - total_players
+    - league_type ( community league, competive club, tournaments, facilites)
+    - gender
+    - password
+
+
+* Brand
+    - name
+    - email
+    - phone
+    - website
+    - profile_photo
+    - password
+
+
+* Campaign
+    - name: string
