@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
-    "deploy": "git push heroku main"
+    "deploy": "git push heroku main",
+    "readme": "git add . && git commit -m 'updated readme' && git push"
   },
   "author": "Will Sheppard",
   "license": "ISC",
