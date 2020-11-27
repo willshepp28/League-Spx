@@ -1,0 +1,7 @@
+SEQUELIZE CLI
+
+- npx sequelize-cli init
+- npx sequelize-cli db:create
+- npx sequelize-cli model:generate --name User --attributes 
+- npx sequelize-cli db:migrate
+- npx sequelize-cli seed:generate --name

@@ -1,0 +1,19 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "League-Spx",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "database": "League-Spx",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
