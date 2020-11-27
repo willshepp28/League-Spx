@@ -1,7 +1,7 @@
 <h1 align="center">Because investing in community matters!!!</h1>
 
 <p align="center">
-  <img src="https://league-spx-assets.s3.amazonaws.com/logo+(1).png" alt="leagueSpx-logo" width="120px" height="120px"/>
+  <img src="https://league-spx-assets.s3.amazonaws.com/logo+(1).png" alt="leagueSpx-logo"/>
   <br>
   <i>LeagueSpx is a platform to enable brands to connect and sports youth sports.</i>
   <br>
