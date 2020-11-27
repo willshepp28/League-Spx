@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://league-spx-assets.s3.amazonaws.com/logo+(1).png" alt="leagueSpx-logo"/>
   <br>
-  <i>LeagueSpx is a platform to enable brands to connect and sports youth sports.</i>
+  <i>LeagueSpx is a platform to enable brands to connect,and sponsor youth sports teams.</i>
   <br>
 </p>
 
