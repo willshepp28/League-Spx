@@ -20,4 +20,4 @@ League sponsorship web service
 
 ## Data Model
 
-<img src="https://league-spx-assets.s3.amazonaws.com/LeagueSpx.png" width="350">
+<img src="https://league-spx-assets.s3.amazonaws.com/LeagueSpx.png" width="500">
