@@ -15,7 +15,17 @@ League sponsorship web service
 
 
 ## Requirements
-    * It should have two endpoints. One for adding a league to the system, and other for finding leagues to sponser
+    * It should have two endpoints.
+    * One for adding a league to the system
+    * Another for for finding leagues to sponsor.
+
+### Adding 
+    * A league should be a collection of name, pair of longitude/latitude, and a single price point to purchase sponsorship.
+
+### Finding
+    * Endpoint for finding leagues, should consist of a latitude/longitude pair around which to focus the search.
+    * A radius in miles in which to search around that central point.
+    * A total budget to spend on leagues.
 
 
 ## Data Model
