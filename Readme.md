@@ -16,3 +16,8 @@ League sponsorship web service
 
 ## Requirements
     * It should have two endpoints. One for adding a league to the system, and other for finding leagues to sponser
+
+
+## Data Model
+
+<img src="https://league-spx-assets.s3.amazonaws.com/LeagueSpx.png" width="250">
