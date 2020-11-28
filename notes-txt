@@ -9,6 +9,7 @@ SEQUELIZE CLI
 
 
 LONGITUDE / LATITUDE
+https://galxzx.github.io/blog/2017/03/15/Distance-Based-Queries-with-PostgreSQL-PostGIS-and-Sequelize/ 
  https://sequelize.org/master/class/lib/data-types.js~GEOMETRY.html
 https://stackoverflow.com/questions/44675630/geospatial-distance-calculator-using-sequelize-mysql
 https://manuel-rauber.com/2016/01/08/using-geo-based-data-with-sequelizejs-utilizing-postgresql-and-ms-sql-server-in-node-js/
