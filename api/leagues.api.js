@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const Sequelize = require("sequelize");
 const model = require("../db/models");
 
 
@@ -6,19 +7,27 @@ const model = require("../db/models");
 // GET path to find a league
 // Given a total budget, a radius, and a location, this service should return enough leagues to spend up to the budget, sponsoring as many leagues as possible without going over it
 router.get("/", async(request, response) => {
-    // let options = {
-    //     budget: request.body.budget,
-    //     radius: request.body.radius,
-    //     latitude: request.body.latitude,
-    //     longitude: request.body.longitude
-    // };
+    if( !request.body.latitude || !request.body.longitude){
+        return response.status(400).json({message: "Please enter a range, longitude, and latitidue"})
+    }
+
 
     try {
-        const leagues = await model.League.findAll({ attributes: ["name", "location"]});
+        const leagues = await model.League.findAll({ 
+            where: Sequelize.where(
+                Sequelize.fn('ST_DWithin',
+                  Sequelize.col("location"),
+                  Sequelize.fn('ST_SetSRID',
+                    Sequelize.fn('ST_MakePoint',
+                      request.body.longitude, request.body.latitude),
+                    4326),
+                  +request.body.range * 0.016),
+                true)});
         return response.status(200).json(leagues);
-    } catch(error) {
-        return response.status(400).json(error)
+    } catch(error){ 
+        return response.status(400).json(error);
     }
+    
 });
 
 
@@ -46,15 +55,8 @@ router.post("/", async (request, response) => {
 });
 
 
-router.get("/location", async(request ,response) => {
 
-    try {
-        let locations = await model.League.findAll({ attributes: ["location"]});
-        return response.status(200).json(locations);
-    } catch(error) {
-        return response.status(400).json(error);
-    }
-})
+
 
 
 
