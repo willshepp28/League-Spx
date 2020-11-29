@@ -40,19 +40,26 @@ router.get("/", async(request, response) => {
 
 // POST path to add league
 router.post("/", async (request, response) => {
-    const league = {
+
+    if(!request.body.name || !request.body.latitude || !request.body.longitude || !request.body.price) {
+        console.log("fail")
+        return response.status(400).json({
+            message: "Please enter valid credentials"
+        })
+    }
+    const data = {
         name: request.body.name,
-        email: request.body.email,
+        email: request.body.email || null,
         location: {
             type: "Point",
-            coordinates: [request.body.latitude, request.body.longitude]
+            coordinates: [request.body.longitude, request.body.latitude]
         },
         price: request.body.price
     }
 
     try {
-        league = await model.League.create(league);
-        return response.status(200).json(league);
+        league = await model.League.create(data);
+        return response.status(201).json(league);
     } catch(error) {
         console.log(error);
         return response.status(400).json(error)
@@ -61,7 +68,16 @@ router.post("/", async (request, response) => {
 });
 
 
+router.get("/all", async(request, response) => {
 
+    try {
+        let leagues = await model.League.findAll();
+        return response.status(200).json(leagues)
+    } catch(error){
+        console.log(error)
+        return response.status(400).json(error)
+    }
+})
 
 
 

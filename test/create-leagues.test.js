@@ -1,22 +1,13 @@
-const chai = require("chai");
-const chaiHttp = require("chai-http");
 const app = require("../app");
+const request = require("supertest");
+const { expect } = require("chai");
 
+describe("POST League", () => {
 
-const { expect } = chai;
-
-chai.use(chaiHttp);
-
-describe("GET Leagues", () => {
-    it("should return an array of all the movies", (done) => {
-        chai.request(app)
-            .get("/leagues")
-            .end((error, response) => {
-                if(error) done(error);
-                
-                expect(response).to.have.status(200);
-                expect(response).to.be.an("object")
-                done();
-            })
+    it("Should fail with missing credential", async() => {
+        const response = await request(app)
+            .post("/leagues")
+            .send({})
+            .expect(400)
     })
 })

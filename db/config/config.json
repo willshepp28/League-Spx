@@ -7,6 +7,14 @@
     "dialect": "postgres",
     "logging": true
   },
+  "test": {
+    "username": "postgres",
+    "password": null,
+    "database": "League-Spx-Test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": true
+  },
   "production": {
     "use_env_variable": "DATABASE_URL",
     "database": "League-Spx",
