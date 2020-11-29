@@ -21,14 +21,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     encrypted_password: {
       type: DataTypes.TEXT,
-      allowNull: false 
+      allowNull: true 
     },
     website_url: DataTypes.TEXT,
-    coordinates:{
+    location:{
       type: DataTypes.GEOMETRY("POINT", 4326),
       allowNull: false
     },

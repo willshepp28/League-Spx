@@ -15,16 +15,16 @@ module.exports = {
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       encrypted_password: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
       },
       website_url: {
         type: Sequelize.TEXT
       },
-      coordinates: {
+      location: {
         type: Sequelize.GEOMETRY("POINT", 4326),
         allowNull:false
       },

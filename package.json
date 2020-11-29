@@ -11,7 +11,9 @@
     "readme": "git add . && git commit -m 'updated readme' && git push",
     "createdb": " sequelize db:create",
     "dropdb": "sequelize db:drop",
-    "migrate": "sequelize db:migrate"
+    "migrate": "sequelize db:migrate",
+    "seedAll": "npx sequelize db:seed:all",
+    "dropcreatedb": "sequelize db:drop && sequelize db:create"
   },
   "author": "Will Sheppard",
   "license": "ISC",

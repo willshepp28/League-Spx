@@ -16,11 +16,19 @@ https://manuel-rauber.com/2016/01/08/using-geo-based-data-with-sequelizejs-utili
 https://medium.com/javascript-in-plain-english/an-introduction-to-geocoding-using-node-js-fe1a5d3aa05c
 
 
+PostGIS
+- https://stackoverflow.com/questions/36642210/how-to-correctly-find-objects-by-proximity-using-sequelize-js-and-postgis
+- https://stackoverflow.com/questions/49010851/sequelize-postgis-sort-by-distance-from-point
+
 
 CALCULATE RADIUS
 https://www.geodatasource.com/developers/javascript
 
 
+
+DB OPERATIONS
+
+\d+ "Leagues"  - describe a table
 
 
 
@@ -50,3 +58,16 @@ DATA MODEL
 
 * Campaign
     - name: string
+
+
+
+
+
+
+
+
+QUERY
+
+SELECT *
+FROM your_table
+WHERE ST_Distance_Sphere(the_geom, ST_MakePoint(your_lon,your_lat)) <= radius_mi * 1609.34
