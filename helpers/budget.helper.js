@@ -6,12 +6,12 @@ function isOverBudget(counter, leagues, budget) {
 
 
 // takes a number represented by budget and returns only what the user can afford
-function leaguesInBudget(leagues, budget){
+function getLeaguesInBudget(leagues, budget){
     let counter = 0;
     let newLeagues = [];
   
-  for(let i = 0; counter <= budget || i === leagues.length; i++) {
-      if(isOverBudget(counter, leagues[i], budget)) break;
+  for(let i = 0; counter <= budget; i++) {
+      if(i === leagues.length || isOverBudget(counter, leagues[i], budget)) break;
 
       counter+= parseInt(leagues[i].price);
       newLeagues.push(leagues[i]);
@@ -20,4 +20,4 @@ function leaguesInBudget(leagues, budget){
     return newLeagues;
 }
 
-module.exports = leaguesInBudget;
+module.exports = getLeaguesInBudget;

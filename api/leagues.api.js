@@ -1,16 +1,14 @@
 const router = require("express").Router();
 const Sequelize = require("sequelize");
 const model = require("../db/models");
-const leaguesInBudget = require("../helper/budget.helper");
+const {addLeagueValidator, findLeagueValidator} = require("../helpers/validation/league.validation");
+const leaguesInBudget = require("../helpers/budget.helper");
 
 
 
 // GET path to find a league
 // Given a total budget, a radius, and a location, this service should return enough leagues to spend up to the budget, sponsoring as many leagues as possible without going over it
-router.get("/", async(request, response) => {
-    if( !request.body.radius || !request.body.latitude || !request.body.longitude || !request.body.budget){
-        return response.status(400).json({message: "Please enter a range, longitude, and latitidue"})
-    }
+router.get("/", findLeagueValidator, async(request, response) => {
 
     try {
         const getLeaguesByRadius = await model.League.findAll({ 
@@ -39,14 +37,8 @@ router.get("/", async(request, response) => {
 
 
 // POST path to add league
-router.post("/", async (request, response) => {
-
-    if(!request.body.name || !request.body.latitude || !request.body.longitude || !request.body.price) {
-        console.log("fail")
-        return response.status(400).json({
-            message: "Please enter valid credentials"
-        })
-    }
+router.post("/", addLeagueValidator, async (request, response) => {
+    
     const data = {
         name: request.body.name,
         email: request.body.email || null,
