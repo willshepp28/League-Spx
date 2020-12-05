@@ -21,6 +21,9 @@ router.get("/", findLeagueValidator, async(request, response) => {
                     4326),
                   +request.body.radius * 0.016),
                 true),
+                from : {
+                    $between: [0 , +request.body.budget]
+                },
             attributes: ["id", "name", "price"],
             order: [["price", "ASC"]],
             raw: true
