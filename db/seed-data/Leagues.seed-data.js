@@ -5,7 +5,7 @@ function getLeagues(Sequelize){
         {
          name: "South Bay Youth Sports",
          email: "southbay@gmail.com",
-         location: Sequelize.fn('ST_GeomFromText', 'POINT(-118.48882047444324 34.02549682312539)', 4326),
+         location: Sequelize.fn('ST_GeomFromText', 'POINT(-118.42020300779284 33.924138064630505)', 4326),
          price: 1000,
          createdAt: new Date(),
          updatedAt: new Date()
@@ -13,12 +13,13 @@ function getLeagues(Sequelize){
        {
          name: "City of Santa Clarita Youth Sports",
          email: "santaclaritayouthsports@outlook.com",
-         location: Sequelize.fn('ST_GeomFromText', 'POINT(-118.27081885927176 34.017494192295274)', 4326),
+         location: Sequelize.fn('ST_GeomFromText', 'POINT(-118.49882073889609 34.41014406665242)', 4326),
          price: 3000,
          createdAt: new Date(),
          updatedAt: new Date()
        },
        {
+         // 34.02303627909577, -118.25726035660594
          name: "Kids In Sports",
          email: "kidsinsports@yahoo.com",
          location: Sequelize.fn('ST_GeomFromText', 'POINT(-118.23977338785828 34.026548741061106)', 4326),
@@ -27,6 +28,7 @@ function getLeagues(Sequelize){
          updatedAt: new Date()
        },
        {
+         //
          name: "Community Youth Sports & Art",
          email: "communityyouth@gmail.com",
          location: Sequelize.fn('ST_GeomFromText', 'POINT( -118.32491743058247 34.059548783401496)', 4326),
